@@ -2,6 +2,7 @@ import os
 
 import streamlit as st
 import pandas as pd
+!pip install matplotlib
 from matplotlib import pyplot as plt
 
 from pc_formater import PCFormatter
