@@ -66,7 +66,7 @@ class RealEstateAnalytics:
         """
         return df[column_name].mean()
 
-    def calculate_statistics(self, df: pd.DataFrame, uncleaned_df: pd.DataFrame) -> dict:
+    def calculate_statistics(self, df: pd.DataFrame, uncleaned_df: pd.DataFrame = None) -> dict:
         """
         Calculate a set of statistics and graph data from the DataFrame.
 
@@ -86,7 +86,7 @@ class RealEstateAnalytics:
             'Average Lot Area': self.calculate_average(df, 'Lot Area'),
             'Average Rooms': self.calculate_average(df, 'Rooms'),
             'Average Sold Price': self.calculate_average(df, 'Sold Price'),
-            'Status Counts': self.calculate_status_statistics(uncleaned_df)
+            # 'Status Counts': self.calculate_status_statistics(uncleaned_df)
         }
         
         # Graph Data
